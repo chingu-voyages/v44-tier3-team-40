@@ -36,7 +36,7 @@ Before you start contributing, you must clone our repository onto your computer.
 
 ```bash
 git clone https://github.com/chingu-voyages/v44-tier3-team-40.git
-'''
+```
 
 ## Select a task
 
