@@ -7,12 +7,13 @@ The following are mostly guidelines, not rules. Use your best judgment, and feel
 **Table of Contents**
 
 1. [Configure shell](#configure-shell)
-1. [Configure git](#configure-git)
-1. [Select a task](#select-a-task)
-1. [Create a feature branch](#create-a-feature-branch)
-1. [Create a commit](#create-a-commit)
-1. [Update the feature branch for code review](#update-the-feature-branch-for-code-review)
-1. [Programmer Reference](#programmer-reference)
+2. [Configure git](#configure-git)
+3. [Clone Repo](#clone-repository)
+4. [Select a task](#select-a-task)
+5. [Create a feature branch](#create-a-feature-branch)
+6. [Create a commit](#create-a-commit)
+7. [Update the feature branch for code review](#update-the-feature-branch-for-code-review)
+8. [Programmer Reference](#programmer-reference)
 
 ## Configure shell
 
@@ -28,6 +29,14 @@ These commands can be run in any shell terminal.
 git config --global user.name "full name. the name on your resume"
 git config --global user.email "myemail@example.com"
 ```
+
+## Clone Repository
+
+Before you start contributing, you must clone our repository onto your computer. Open up a terminal in the folder that you want to clone the project to. Then use this command:
+
+```bash
+git clone https://github.com/chingu-voyages/v44-tier3-team-40.git
+'''
 
 ## Select a task
 
