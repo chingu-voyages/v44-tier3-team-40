@@ -3,25 +3,94 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+	--foreground-rgb: 0, 0, 0;
+	--background-start-rgb: 214, 219, 220;
+	--background-end-rgb: 255, 255, 255;
+
+	--primary-color: #554ad8;
+	--secondary-color: #101010;
+	--tertiary-color: #f1f1f1;
+	--quaternary-color: #fafafa;
+	--quinary-color: #a4a4ff;
+
+	font-family: Helvetica, Arial, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+h1 {
+	font-family: Helvetica Neue Bold;
+	font-size: 56px;
+	text-transform: capitalize;
+	line-height: 58px;
+	letter-spacing: 2px;
+}
+
+h2 {
+	font-family: Helvetica Neue Bold;
+	font-size: 40px;
+	text-transform: capitalize;
+	line-height: 44px;
+	letter-spacing: 1.5px;
+}
+
+h2 {
+	font-family: Helvetica Neue Bold;
+	font-size: 40px;
+	text-transform: capitalize;
+	line-height: 44px;
+	letter-spacing: 1.5px;
+}
+
+h3 {
+	font-family: Helvetica Neue Bold;
+	font-size: 32px;
+	text-transform: capitalize;
+	line-height: 36px;
+	letter-spacing: 1.15px;
+}
+
+h4 {
+	font-family: Helvetica Neue Bold;
+	font-size: 28px;
+	text-transform: capitalize;
+	line-height: 38px;
+	letter-spacing: 2px;
+}
+
+h5 {
+	font-family: Helvetica Neue Bold;
+	font-size: 24px;
+	text-transform: capitalize;
+	line-height: 33px;
+	letter-spacing: 1.7px;
+}
+
+h6 {
+	font-family: Helvetica Neue Bold;
+	font-size: 18px;
+	text-transform: capitalize;
+	line-height: 24px;
+	letter-spacing: 1.3px;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+	font-family: Helvetica Neue Medium;
+	font-size: 16px;
+	line-height: 25px;
+
+	/* Boilerplate Styles */
+	color: rgb(var(--foreground-rgb));
+	background: linear-gradient(
+			to bottom,
+			transparent,
+			rgb(var(--background-end-rgb))
+		)
+		rgb(var(--background-start-rgb));
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--foreground-rgb: 255, 255, 255;
+		--background-start-rgb: 0, 0, 0;
+		--background-end-rgb: 0, 0, 0;
+	}
 }
