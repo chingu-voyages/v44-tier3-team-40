@@ -1,13 +1,4 @@
-"use client";
-import ProgressStepper from "../components/ProgressStepper";
-import { useState } from "react";
-
 const Demo = () => {
-  const [currentStep, setCurrentStep] = useState<number>(0);
-  function handleClick() {
-    setCurrentStep((prevState) => prevState + 1);
-  }
-
   return (
     <div>
       <h1>Header 1</h1>
@@ -27,10 +18,6 @@ const Demo = () => {
       <button className="bg-blueLapis">blueLapis</button>
       <button className="bg-blueLapisLight">blueLapisLight</button>
       <button className="bg-grayLight">grayLight</button>
-      <ProgressStepper currentStep={currentStep} length={5} />
-      <button onClick={handleClick} className="bg-[red] px-3">
-        Next
-      </button>
     </div>
   );
 };
