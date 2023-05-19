@@ -103,6 +103,10 @@ input {
 }
 
 input:focus {
+	outline: none;
+}
+
+input:focus {
 	border: 1px solid #554ad8;
 	color: black;
 }
@@ -115,6 +119,26 @@ input::placeholder {
 
 input:invalid {
 	border: 2px solid red;
+}
+
+input[type="radio"] {
+	appearance: none;
+
+	width: 25px;
+	height: 25px;
+	border: 1px solid #cfcfcf;
+}
+
+input[type="radio"]:checked {
+	border: 4px solid white;
+
+	outline: 1px solid #cfcfcf;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	appearance: none;
+	margin-left: 1.5em;
 }
 
 label {
@@ -134,6 +158,7 @@ textarea {
 
 textarea:focus {
 	border: 1px solid #554ad8;
+	outline: none;
 }
 
 @media (prefers-color-scheme: dark) {
