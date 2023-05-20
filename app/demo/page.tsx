@@ -1,4 +1,9 @@
+"use client";
+import DatePicker from "../components/DatePicker";
+import { useState } from "react";
+
 const Demo = () => {
+  const [selectedDay, setSelectedDay] = useState<number>(15);
   return (
     <div>
       <h1>Header 1</h1>
@@ -18,6 +23,11 @@ const Demo = () => {
       <button className="bg-blueLapis">blueLapis</button>
       <button className="bg-blueLapisLight">blueLapisLight</button>
       <button className="bg-grayLight">grayLight</button>
+      <DatePicker
+        selectedDay={selectedDay}
+        selectedMonth="march"
+        setSelectedDay={setSelectedDay}
+      />
     </div>
   );
 };
