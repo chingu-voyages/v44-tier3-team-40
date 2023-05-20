@@ -1,9 +1,12 @@
 "use client";
+import DatePicker from "../components/DatePicker";
 import ProgressStepper from "../components/ProgressStepper";
 import { useState } from "react";
 
 const Demo = () => {
   const [currentStep, setCurrentStep] = useState<number>(0);
+  const [selectedDay, setSelectedDay] = useState<number>(15);
+  
   function handleClick() {
     setCurrentStep((prevState) => prevState + 1);
   }
@@ -27,6 +30,11 @@ const Demo = () => {
       <button className="bg-blueLapis">blueLapis</button>
       <button className="bg-blueLapisLight">blueLapisLight</button>
       <button className="bg-grayLight">grayLight</button>
+      <DatePicker
+        selectedDay={selectedDay}
+        selectedMonth="march"
+        setSelectedDay={setSelectedDay}
+      />
       <ProgressStepper currentStep={currentStep} length={5} />
       <button onClick={handleClick} className="bg-[red] px-3">
         Next
