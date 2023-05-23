@@ -73,7 +73,7 @@ const ProgressStepper: FC<ProgressStepperProps> = ({
   }
 
   return (
-    <div className="w-full max-w-[1110px] min-w-[320px] my-0 mx-auto">
+    <div className="w-full max-w-[1110px] my-0 mx-auto">
       <label
         htmlFor="progress"
         className="font-bold text-blueLapis text-[13px]"
