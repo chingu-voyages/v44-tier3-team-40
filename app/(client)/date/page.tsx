@@ -7,7 +7,11 @@ const ChooseADatePage: FC<ChooseADatePageProps> = () => {
   return (
     <div>
       <h1 className="text-[40px]">Western Rehab PT</h1>
-      <ProgressStepper currentStep={3} length={5} />
+      <ProgressStepper
+        currentStep={3}
+        length={5}
+        label="Select a date and time slot"
+      />
     </div>
   );
 };
