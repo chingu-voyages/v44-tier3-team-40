@@ -57,7 +57,7 @@ const DropDownMenu: FC<DropDownMenuProps> = ({
         <IconChevron />
       </button>
       {isOpen && (
-        <ol>
+        <ol className="max-h-[220px] overflow-y-auto">
           {options.map((option) => (
             <li key={option}>
               <button
