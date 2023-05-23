@@ -1,4 +1,5 @@
 import "./globals.css";
+import LinkButton from "./components/LinkButton";
 
 export const metadata = {
   title: "Create Next App",
@@ -12,7 +13,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <nav className="w-full h-[48px]">
+          <LinkButton text="BACK" />
+        </nav>
+        {children}
+      </body>
     </html>
   );
 }

@@ -3,6 +3,7 @@ import DatePicker from "../components/DatePicker";
 import DropDownMenu from "../components/DropDownMenu";
 import ProgressStepper from "../components/ProgressStepper";
 import { useState } from "react";
+import LinkButton from "../components/LinkButton";
 
 const Demo = () => {
   const [currentStep, setCurrentStep] = useState<number>(0);
@@ -86,6 +87,7 @@ const Demo = () => {
         selectedOption={selectedYear}
         setSelectedOption={setSelectedYear}
       />
+      <LinkButton text="home" href="/" />
     </div>
   );
 };
