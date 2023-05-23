@@ -3,168 +3,201 @@
 @tailwind utilities;
 
 :root {
-	--foreground-rgb: 0, 0, 0;
-	--background-start-rgb: 214, 219, 220;
-	--background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
 
-	--primary-color: #554ad8;
-	--secondary-color: #101010;
-	--tertiary-color: #f1f1f1;
-	--quaternary-color: #fafafa;
-	--quinary-color: #a4a4ff;
+  --primary-color: #554ad8;
+  --secondary-color: #101010;
+  --tertiary-color: #f1f1f1;
+  --quaternary-color: #fafafa;
+  --quinary-color: #a4a4ff;
 
-	font-family: HelveticaNeue, Helvetica, Arial, sans-serif;
+  font-family: HelveticaNeue, Helvetica, Arial, sans-serif;
 }
 
 @layer base {
-	@font-face {
-		font-family: "HelveticaNeue";
-		src: local("HelveticaNeue"), url("/fonts/Helvetica Neue Regular.otf");
-		font-weight: 300;
-		font-display: swap;
-	}
-	@font-face {
-		font-family: "HelveticaNeue";
-		src: local("HelveticaNeue"),
-			url("/fonts/Helvetica Neue 67 Medium Condensed.otf");
-		font-weight: 400;
-		font-display: swap;
-	}
-	@font-face {
-		font-family: "HelveticaNeue";
-		src: local("HelveticaNeue"), url("/fonts/Helvetica Neue Condensed Bold.ttf");
-		font-weight: 700;
-		font-display: swap;
-	}
-	@font-face {
-		font-family: "HelveticaNeue";
-		src: local("HelveticaNeue"),
-			url("/fonts/Helvetica Neue 97 Black Condensed.otf");
-		font-weight: 800;
-		font-display: swap;
-	}
+  @font-face {
+    font-family: "HelveticaNeue";
+    src: local("HelveticaNeue"), url("/fonts/Helvetica Neue Regular.otf");
+    font-weight: 300;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "HelveticaNeue";
+    src: local("HelveticaNeue"),
+      url("/fonts/Helvetica Neue 67 Medium Condensed.otf");
+    font-weight: 400;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "HelveticaNeue";
+    src: local("HelveticaNeue"), url("/fonts/Helvetica Neue Condensed Bold.ttf");
+    font-weight: 700;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "HelveticaNeue";
+    src: local("HelveticaNeue"),
+      url("/fonts/Helvetica Neue 97 Black Condensed.otf");
+    font-weight: 800;
+    font-display: swap;
+  }
 }
 
 h1 {
-	font-size: 56px;
-	line-height: 58px;
-	letter-spacing: 2px;
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: 1.15px;
 }
 
 h2 {
-	font-size: 40px;
-	line-height: 44px;
-	letter-spacing: 1.5px;
-}
-
-h2 {
-	font-size: 40px;
-	line-height: 44px;
-	letter-spacing: 1.5px;
+  font-size: 28px;
+  line-height: 38px;
+  letter-spacing: 2px;
 }
 
 h3 {
-	font-size: 32px;
-	line-height: 36px;
-	letter-spacing: 1.15px;
+  font-size: 24px;
+  line-height: 33px;
+  letter-spacing: 1.3px;
 }
 
 h4 {
-	font-size: 28px;
-	line-height: 38px;
-	letter-spacing: 2px;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 1.3px;
 }
 
 h5 {
-	font-size: 24px;
-	line-height: 33px;
-	letter-spacing: 1.7px;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 1.3px;
 }
 
 h6 {
-	font-size: 18px;
-	line-height: 24px;
-	letter-spacing: 1.3px;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 1.3px; 
+}
+
+/* desktop */
+@media only screen and (max-width: 992px) {
+  h1 {
+    font-size: 56px;
+    line-height: 58px;
+    letter-spacing: 2px;
+  }
+
+  h2 {
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: 1.5px;
+  }
+
+  h3 {
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: 1.15px;
+  }
+
+  h4 {
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: 2px;
+  }
+
+  h5 {
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: 1.7px;
+  }
+
+  h6 {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 1.3px;
+  }
 }
 
 body {
-	font-size: 16px;
-	line-height: 25px;
+  font-size: 16px;
+  line-height: 25px;
 }
 
 input {
-	color: black;
-	border: 1px solid #cfcfcf;
+  color: black;
+  border: 1px solid #cfcfcf;
 
-	width: 309px;
-	height: 56px;
+  width: 309px;
+  height: 56px;
 
-	padding-left: 24px;
+  padding-left: 24px;
 }
 
 input:focus {
-	outline: none;
+  outline: none;
 }
 
 input:focus {
-	border: 1px solid #554ad8;
-	color: black;
+  border: 1px solid #554ad8;
+  color: black;
 }
 
 input::placeholder {
-	padding-left: 24px;
-	color: #cfcfcf;
-	font-size: 14px;
+  padding-left: 24px;
+  color: #cfcfcf;
+  font-size: 14px;
 }
 
 input:invalid {
-	border: 2px solid red;
+  border: 2px solid red;
 }
 
 input[type="radio"] {
-	appearance: none;
+  appearance: none;
 
-	width: 25px;
-	height: 25px;
-	border: 1px solid #cfcfcf;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #cfcfcf;
 }
 
 input[type="radio"]:checked {
-	border: 4px solid white;
+  border: 4px solid white;
 
-	outline: 1px solid #cfcfcf;
+  outline: 1px solid #cfcfcf;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
-	appearance: none;
-	margin-left: 1.5em;
+  appearance: none;
+  margin-left: 1.5em;
 }
 
 label {
-	color: black;
+  color: black;
 }
 
 textarea {
-	color: black;
-	border: 1px solid #cfcfcf;
-	font-size: 14px;
+  color: black;
+  border: 1px solid #cfcfcf;
+  font-size: 14px;
 
-	padding-left: 24px;
+  padding-left: 24px;
 
-	min-height: 182px;
-	min-width: 309px;
+  min-height: 182px;
+  min-width: 309px;
 }
 
 textarea:focus {
-	border: 1px solid #554ad8;
-	outline: none;
+  border: 1px solid #554ad8;
+  outline: none;
 }
 
 @media (prefers-color-scheme: dark) {
-	:root {
-		--foreground-rgb: 255, 255, 255;
-		--background-start-rgb: 0, 0, 0;
-		--background-end-rgb: 0, 0, 0;
-	}
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
 }
