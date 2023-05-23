@@ -68,7 +68,11 @@ const Demo = () => {
         selectedMonth="march"
         setSelectedDay={setSelectedDay}
       />
-      <ProgressStepper currentStep={currentStep} length={5} />
+      <ProgressStepper
+        currentStep={currentStep}
+        length={5}
+        label={"Select a date and time slot"}
+      />
       <button onClick={handleClick} className="bg-[red] px-3">
         Next
       </button>

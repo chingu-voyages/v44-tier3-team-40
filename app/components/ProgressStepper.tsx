@@ -3,15 +3,21 @@ import { FC } from "react";
 interface ProgressStepperProps {
   currentStep: number;
   length: number;
+  label: string;
 }
 
 /**
  *
  * @param {number} currentStep This determines which steps/circles are colored in
  * @param {number} length This determines how many steps/circles there are
+ * @param {number} label The text that appears above the element
  * @returns React.JSX.Element
  */
-const ProgressStepper: FC<ProgressStepperProps> = ({ currentStep, length }) => {
+const ProgressStepper: FC<ProgressStepperProps> = ({
+  currentStep,
+  length,
+  label,
+}) => {
   function GenerateLine(index: number): React.JSX.Element {
     let fillColor: string;
 
@@ -68,6 +74,18 @@ const ProgressStepper: FC<ProgressStepperProps> = ({ currentStep, length }) => {
 
   return (
     <div className="w-full max-w-[1110px] min-w-[320px] my-0 mx-auto">
+      <label
+        htmlFor="progress"
+        className="font-bold text-blueLapis text-[13px]"
+      >
+        {label}
+        <progress
+          id="progress"
+          className="invisible"
+          max={length}
+          value={currentStep}
+        ></progress>
+      </label>
       <ol className="w-full flex overflow-hidden">{GenerateSteps()}</ol>
     </div>
   );
