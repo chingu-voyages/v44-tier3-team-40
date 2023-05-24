@@ -81,7 +81,7 @@ const ProgressStepper: FC<ProgressStepperProps> = ({
         {label}
         <progress
           id="progress"
-          className="invisible"
+          className="hidden"
           max={length}
           value={currentStep}
         ></progress>
