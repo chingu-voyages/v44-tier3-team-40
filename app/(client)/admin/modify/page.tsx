@@ -1,4 +1,5 @@
 import TextFormInput from "@/app/FormComponents/FormInputs";
+import Link from "next/link";
 
 const ModifyAppointment = () => {
 	return (
@@ -15,12 +16,15 @@ const ModifyAppointment = () => {
 			/>
 
 			{/* Button to be replaced with component once finished */}
-			<button
-				type="submit"
-				className="h-[48px] w-[160px] ml-[1em] mt-[1em] mb-[1em] bg-[#554ad8] text-white  center"
-			>
-				Submit
-			</button>
+			{/* Change href to Modify Appointment page. */}
+			<Link href="/">
+				<button
+					type="submit"
+					className="h-[48px] w-[160px] ml-[1em] mt-[1em] mb-[1em] bg-[#554ad8] text-white  center"
+				>
+					Submit
+				</button>
+			</Link>
 
 			<div className="ml-[1em] text-[#554ad8]">
 				<p>Forgot your confirmation number?</p>
