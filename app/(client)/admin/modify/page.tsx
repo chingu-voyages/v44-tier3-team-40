@@ -16,8 +16,7 @@ const ModifyAppointment = () => {
 			/>
 
 			{/* Button to be replaced with component once finished */}
-			{/* Change href to Modify Appointment page. */}
-			<Link href="/">
+			<Link href="/admin/confirmation">
 				<button
 					type="submit"
 					className="h-[48px] w-[160px] ml-[1em] mt-[1em] mb-[1em] bg-[#554ad8] text-white  center"
