@@ -2,8 +2,8 @@ import Link from "next/link";
 
 const Homepage = () => {
 	return (
-		<>
-			<div className="flex justify-end mr-[1em] relative bottom-[2.5em]">
+		<div className="mt-[8em]">
+			<div className="flex justify-end mr-[1em]  relative bottom-[10.5em]">
 				<img src="/tp_logo.png" alt="The logo for Therapease" />
 			</div>
 
@@ -34,7 +34,7 @@ const Homepage = () => {
 					Modify it here.
 				</p>
 			</Link>
-		</>
+		</div>
 	);
 };
 
