@@ -40,12 +40,15 @@ const ChooseADatePage: FC<ChooseADatePageProps> = () => {
 
   function handleSubmit() {
     // combine the date and time in a Date object that can be converted to any timezone later
-    if (selectedDate !== null) {
+    if (selectedDate !== null && selectedTime !== null) {
       let finalDate = new Date(`${selectedDate}`);
       const regex = /^\d+/;
-      let hour = parseInt(selectedTime!.match(regex)[0]);
-      finalDate.setHours(hour, 0, 0);
-      console.log(finalDate);
+      let timeString = selectedTime.match(regex);
+      if (timeString && selectedTime[0]) {
+        const hour = parseInt(timeString[0]);
+        finalDate.setHours(hour, 0, 0);
+        console.log(finalDate);
+      }
     }
   }
 
