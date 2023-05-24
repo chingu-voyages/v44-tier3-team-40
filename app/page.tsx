@@ -28,8 +28,7 @@ const Homepage = () => {
 				Already have an appointment?
 			</p>
 
-			{/* Change href to "Modify Appointment" page when available */}
-			<Link href="/">
+			<Link href="/admin/modify">
 				<p className="ml-[1em] mt-[0.5em] text-[#554ad8] cursor-pointer">
 					Modify it here.
 				</p>
