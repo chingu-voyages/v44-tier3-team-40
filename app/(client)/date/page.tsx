@@ -18,6 +18,7 @@ const ChooseADatePage: FC<ChooseADatePageProps> = () => {
     generateTimeSlots(todaysDate)
   );
   const [selectedTime, setSelectedTime] = useState<string>(timeSlots[0]);
+  const [exampleFinalDate, setExampleFinalDate] = useState<Date>();
 
   function generateTimeSlots(date: Date) {
     const maxSlots = 8;
@@ -47,7 +48,7 @@ const ChooseADatePage: FC<ChooseADatePageProps> = () => {
       if (timeString && selectedTime[0]) {
         const hour = parseInt(timeString[0]);
         finalDate.setHours(hour, 0, 0);
-        console.log(finalDate);
+        setExampleFinalDate(finalDate);
       }
     }
   }
@@ -78,8 +79,11 @@ const ChooseADatePage: FC<ChooseADatePageProps> = () => {
           />
         </div>
       </div>
-      <button onClick={handleSubmit}>Confirm</button>
-      {/* TODO: add confirm button */}
+      <button className="p-[24px] border-2 border-black" onClick={handleSubmit}>
+        Confirm
+      </button>
+      <p>{exampleFinalDate && exampleFinalDate.toISOString()}</p>
+      <p>{exampleFinalDate && exampleFinalDate.toLocaleDateString()}</p>
     </div>
   );
 };
