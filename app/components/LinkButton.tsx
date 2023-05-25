@@ -25,8 +25,8 @@ const IconChevron: FC = () => {
 };
 
 /**
- * @param {<string>} text
- * @param {<string>} href optional, If undefined, sends the user to the previous page
+ * @param {string} text string
+ * @param {string} href string: optional, If undefined, sends the user to the previous page
  * @returns React.JSX.Element
  */
 const LinkButton: FC<LinkButtonProps> = ({ text, href }) => {
