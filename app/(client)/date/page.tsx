@@ -19,7 +19,10 @@ const ChooseADatePage: FC<ChooseADatePageProps> = () => {
   );
   const [selectedTime, setSelectedTime] = useState<string>(timeSlots[0]);
   const [exampleFinalDate, setExampleFinalDate] = useState<Date>();
-
+  const minDate = todaysDate;
+  const maxDate = new Date(
+    new Date().setFullYear(new Date().getFullYear() + 1)
+  );
   function generateTimeSlots(date: Date) {
     const maxSlots = 8;
     let slots = [];
@@ -38,6 +41,7 @@ const ChooseADatePage: FC<ChooseADatePageProps> = () => {
     }
     return slots;
   }
+  console.log(maxDate);
 
   function handleSubmit() {
     // combine the date and time in a Date object that can be converted to any timezone later
@@ -70,6 +74,11 @@ const ChooseADatePage: FC<ChooseADatePageProps> = () => {
           defaultValue={selectedDate}
           prevLabel="<"
           nextLabel=">"
+          defaultView="month"
+          minDetail="month"
+          maxDetail="month"
+          minDate={minDate}
+          maxDate={maxDate}
         />
         <div className="max-w-[350px]">
           <DropDownMenu
