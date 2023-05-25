@@ -1,6 +1,33 @@
-import { FC } from "react";
-import ProgressStepper from "../../components/ProgressStepper"
+import ProgressStepper from "../../components/ProgressStepper";
 import DoctorCard from "@/app/CardComponents/DoctorCard";
+import { ref, onValue } from "firebase/database";
+import { doctorsInDB } from "../../../firebase/collections/doctors";
+
+
+onValue(doctorsInDB, function(snapshot) {
+    if (snapshot.exists()) {
+        const doctorsArray = Object.entries(snapshot.val());
+        let doctorDataArray;
+
+        // const testDoctorName = testDataArray
+
+        console.log("doctors array" + doctorsArray);
+    
+        for (let i = 0; i < doctorsArray.length; i++) {
+            doctorDataArray = doctorsArray[i][1];
+
+            // console.log("doctor index:" + i + " " );
+            // console.log(doctorsArray[i]);
+
+            // console.log("doctor name" + i + " " );
+            // console.log(doctorsArray[i][1]);
+        }
+
+        console.log(doctorDataArray);
+    } else {
+        console.log("in the else of onValue");
+    }
+})
 
 
 const ChooseProviderPage = () => {

@@ -1,3 +1,5 @@
+import Link from "next/Link";
+
 const DoctorCard = () => {
     return (
         <div className="max-w-sm rounded overflow-hidden shadow-lg">
@@ -8,7 +10,10 @@ const DoctorCard = () => {
                     Dr. credentials
                 </p>
             </div>
-            <button className="w-[245px] border-black rounded-lg border-2 ">BOOK NOW</button>
+            <Link href="/date">
+                <button id="test-add-button" className="w-[245px] border-black rounded-lg border-2 ">BOOK NOW</button>
+			</Link>
+            
         </div>
     )
 }
