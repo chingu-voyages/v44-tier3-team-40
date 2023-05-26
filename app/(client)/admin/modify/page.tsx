@@ -29,15 +29,6 @@ const ModifyAppointment = () => {
 				<p>Forgot your confirmation number?</p>
 				<p>Call us 513-304-4065</p>
 			</div>
-
-			{/* Button to be replaced with component once finished */}
-			{/* Add link and href to another page when designated */}
-			<button
-				type="submit"
-				className="h-[48px] w-[160px] ml-[1em] mt-[2em] text-white  bg-[#554ad8] center"
-			>
-				See Product
-			</button>
 		</>
 	);
 };
