@@ -1,8 +1,4 @@
-
 import Link from "next/link";
-import Image from 'next/image';
-import firebase_app from '../firebase/config';
-
 
 const Homepage = () => {
 	return (
