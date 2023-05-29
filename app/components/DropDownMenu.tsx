@@ -9,8 +9,8 @@ interface DropDownMenuProps {
 
 /**
  * This is a controlled component, the parent should keep track of which option was selected and inform this component with props
- * @param {Array<string>} options
- * @param {string} selectedOption
+ * @param {Array} options Array of strings
+ * @param {string} selectedOption string
  * @param {Dispatch<SetStateAction<string>>} setSelectedOption A useState setter function from the parent
  * @returns React.JSX.Element
  */

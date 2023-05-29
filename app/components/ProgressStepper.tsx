@@ -8,9 +8,9 @@ interface ProgressStepperProps {
 
 /**
  *
- * @param {number} currentStep This determines which steps/circles are colored in
- * @param {number} length This determines how many steps/circles there are
- * @param {number} label The text that appears above the element
+ * @param {number} currentStep number: This determines which steps/circles are colored in
+ * @param {number} length number: This determines how many steps/circles there are
+ * @param {string} label string: The text that appears above the element
  * @returns React.JSX.Element
  */
 const ProgressStepper: FC<ProgressStepperProps> = ({

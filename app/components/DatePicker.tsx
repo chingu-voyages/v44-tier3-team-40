@@ -8,8 +8,8 @@ interface DatePickerProps {
 
 /**
  *
- * @param {number} selectedDay
- * @param {number} selectedMonth
+ * @param {number} selectedDay number
+ * @param {number} selectedMonth number
  * @param {Dispatch<SetStateAction<number>>} setSelectedMonth A useState setter function from the parent
  * @returns React.JSX.Element
  */

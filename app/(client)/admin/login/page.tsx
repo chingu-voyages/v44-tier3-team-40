@@ -27,7 +27,7 @@ const AdminPortal = () => {
 
 				{/* Button to be replaced with component once finished */}
 				<Link href="/admin/dashboard">
-					<button className="h-[48px] w-[160px] ml-[1em] mt-[1em] bg-[#554ad8] center">
+					<button className="h-[48px] w-[160px] ml-[1em] mt-[1em] bg-[#554ad8] text-white center">
 						Login
 					</button>
 				</Link>
