@@ -52,7 +52,7 @@ const ChooseADatePage: FC<ChooseADatePageProps> = () => {
       if (timeString && selectedTime[0]) {
         const hour = parseInt(timeString[0]);
         finalDate.setHours(hour, 0, 0);
-        setExampleFinalDate(finalDate);
+        setExampleFinalDate(finalDate); // TODO  send this to the database
       }
     }
   }
