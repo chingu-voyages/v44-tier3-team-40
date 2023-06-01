@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Modal from "../../../components/Modal";
 
+// This component will be replaced with the finished component made by QA. However, the state and logic for the button/Modal will need to be carried over.
 const PlaceholderPage = () => {
 	const [modalOpen, setModalOpen] = useState(false);
 
@@ -22,6 +23,7 @@ const PlaceholderPage = () => {
 			>
 				Delete
 			</button>
+
 			<Modal isOpen={modalOpen} onClose={handleCloseModal}>
 				<h3>Are you sure?</h3>
 				<p className="mt-[1em]">
