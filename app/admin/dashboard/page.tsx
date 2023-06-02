@@ -1,5 +1,9 @@
-const Dashboard = () => {
-	return <p>Dummy page to link admin login to</p>;
+import { FC } from "react";
+
+interface DashboardPageProps {}
+
+const DashboardPage: FC<DashboardPageProps> = () => {
+  return <h1>Appointments</h1>;
 };
 
-export default Dashboard;
+export default DashboardPage;
