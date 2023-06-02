@@ -1,4 +1,4 @@
-import Button from "../Button";
+import Button from "../components/Button";
 
 const Modal = ({ isOpen, onClose, children }) => {
 	if (!isOpen) {
@@ -12,8 +12,7 @@ const Modal = ({ isOpen, onClose, children }) => {
 					{children}
 				</div>
 				<div className="flex flex-col mt-[8em] gap-[1em] ml-[1em]">
-					{/* Default background color not working properly on Button */}
-					<Button onClick={onClose} text={"Cancel"} bgColor={"#554ad8"} />
+					<Button onClick={onClose} text={"Cancel"} />
 					<Button
 						onClick={onClose}
 						text={"Delete"}
@@ -22,7 +21,6 @@ const Modal = ({ isOpen, onClose, children }) => {
 						hoverColor="black"
 						hoverText="white"
 					/>
-					{/* <button onClick={onClose}>Test</button> */}
 				</div>
 			</div>
 		</div>
