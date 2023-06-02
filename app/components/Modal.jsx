@@ -6,8 +6,8 @@ const Modal = ({ isOpen, onClose, children }) => {
 	}
 
 	return (
-		<div className="z-0 flex justify-center items-center bg-black bg-opacity-25 w-[w-100%] h-[800px]">
-			<div className="w-[356px] h-[388px]  flex flex-col bg-white z-10">
+		<div className=" flex justify-center items-center bg-black bg-opacity-25 w-[w-100%] h-[800px]">
+			<div className="w-[356px] h-[388px]  flex flex-col bg-white ">
 				<div className="w-[256px] h-[82px] ml-[1em] mt-[1em] font-medium">
 					{children}
 				</div>
@@ -22,6 +22,7 @@ const Modal = ({ isOpen, onClose, children }) => {
 						hoverColor="black"
 						hoverText="white"
 					/>
+					{/* <button onClick={onClose}>Test</button> */}
 				</div>
 			</div>
 		</div>
