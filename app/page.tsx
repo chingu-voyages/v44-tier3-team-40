@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Button from './components/Button'
 
 const Homepage = () => {
 	return (
@@ -19,9 +20,15 @@ const Homepage = () => {
 			{/* Button to be replaced with component once finished */}
 			{/* Change href to "Choose Provider" page when available */}
 			<Link href="/">
-				<button className="h-[48px] w-[160px] ml-[1em] mt-[1em] bg-white center border border-black">
-					Get Started
-				</button>
+				<Button 
+					text="get started"
+					bgColor="white"
+					textColor="black"
+					hoverColor="black"
+					hoverText="white"
+					className=" ml-[1em] mt-[1em] text-[16px] border border-black"
+					onClick={""}
+				/>
 			</Link>
 
 			<p className="ml-[1em] mt-[2em] text-[#554ad8]">

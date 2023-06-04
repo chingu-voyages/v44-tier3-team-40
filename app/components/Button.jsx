@@ -9,6 +9,7 @@ export default function Button({
 	textColor,
 	hoverColor,
 	hoverText,
+	className,
 }) {
 	const [isHovered, setIsHovered] = useState(false);
 
@@ -32,6 +33,7 @@ export default function Button({
 		textColor: PropTypes.string,
 		hoverColor: PropTypes.string,
 		hoverText: PropTypes.string,
+		className: PropTypes.string,
 	};
 
 	Button.defaultProps = {
@@ -40,6 +42,7 @@ export default function Button({
 		textColor: "white",
 		hoverColor: "#A4A4FF",
 		hoverText: "white",
+		className: "",
 	};
 
 	const buttonStyle = {
@@ -47,10 +50,12 @@ export default function Button({
 		color: isHovered ? hoverText : textColor,
 	};
 
+	const buttonClasses = `uppercase font-[700] text-[13px] w-[160px] h-[48px] ${className}`
+
 	return (
 		<div>
 			<button
-				className="uppercase font-[700] text-[13px] w-[160px] h-[48px] border-1 border-solid border-gray-600 border"
+				className={buttonClasses}
 				onMouseOver={handleMouseOver}
 				onMouseOut={handleMouseOut}
 				style={{

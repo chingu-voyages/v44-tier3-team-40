@@ -1,23 +1,25 @@
 "use client";
 import React from 'react'
-import Button from '../Button'
+import Button from '../components/Button'
 import ProgressStepper from '../components/ProgressStepper'
 
 import TextFormInput, {
 	RadioFormInput,
 	NumberFormInput,
 	TextAreaFormInput,
-} from '../FormComponents/FormInputs'
+} from '../components/FormInputs'
 
-const ScheduleForm = () => {
+const ContactDetailsForm = () => {
     return (
         <div>
-            <h2>Western Rehab PT</h2>
+            <h2 className="ml-[0.4em] mt-[1em]">Western Rehab PT</h2>
+            <div className="w-[310px] h-[20px] ml-[1em] mb-[40px] mt-[10px]">
             <ProgressStepper 
             currentStep={3}
             length={5}
             label='Tell us about yourself'
             />
+            </div>
             <TextFormInput
 				htmlFor="fname"
 				label="Name"
@@ -46,9 +48,11 @@ const ScheduleForm = () => {
                 textColor="white"
                 hoverColor="#A4A4FF"
                 hoverText="white"
+                className=" ml-[1em] mt-[1em] text-[16px]"
+				onClick={""}
             />
         </div>
     )
 }
 
-export default ScheduleForm;
+export default ContactDetailsForm;

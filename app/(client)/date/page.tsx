@@ -4,6 +4,7 @@ import ProgressStepper from "@/app/components/ProgressStepper";
 import { FC, useState } from "react";
 import "./Calendar.css";
 import DropDownMenu from "@/app/components/DropDownMenu";
+import Button from '../../components/Button'
 
 interface ChooseADatePageProps {}
 
@@ -88,9 +89,15 @@ const ChooseADatePage: FC<ChooseADatePageProps> = () => {
           />
         </div>
       </div>
-      <button className="p-[24px] border-2 border-black" onClick={handleSubmit}>
-        Confirm
-      </button>
+      <Button 
+					text="Confirm"
+					bgColor="#554ad8"
+					textColor="white"
+					hoverColor="#A4A4FF"
+					hoverText="white"
+					className="mt-[1em] text-[16px]"
+					onClick={handleSubmit}
+				/>
       <p>{exampleFinalDate && exampleFinalDate.toISOString()}</p>
       <p>{exampleFinalDate && exampleFinalDate.toLocaleDateString()}</p>
     </div>

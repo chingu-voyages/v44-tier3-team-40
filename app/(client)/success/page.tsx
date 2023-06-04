@@ -1,3 +1,5 @@
+import Button from '../../components/Button'
+
 const Confirmation = () => {
 	const confirmationNumber = () => {
 		return Math.floor(Math.random() * 10000);
@@ -17,23 +19,29 @@ const Confirmation = () => {
 			{/* Button to be replaced with component once finished */}
 			{/* Add link and href to another page when designated */}
 			<div>
-				<button
-					type="submit"
-					className="h-[48px] w-[207px] ml-[1em] mt-[2em] text-white  bg-[#554ad8] center"
-				>
-					BOOK ANOTHER APPOINTMENT
-				</button>
+				<Button 
+					text="book another appointment"
+					bgColor="#554ad8"
+					textColor="white"
+					hoverColor="#A4A4FF"
+					hoverText="white"
+					className=" ml-[1em] mt-[1em] text-[16px] w-[207px]"
+					onClick={""}
+				/>
 			</div>
 
 			{/* Button to be replaced with component once finished */}
 			{/* Add link and href to another page when designated */}
 			<div>
-				<button
-					type="submit"
-					className="h-[48px] w-[207px] ml-[1em] mt-[1em] text-white  bg-[#554ad8] center"
-				>
-					ADD TO GOOGLE CALENDAR
-				</button>
+				<Button 
+					text="add to google calendar"
+					bgColor="#554ad8"
+					textColor="white"
+					hoverColor="#A4A4FF"
+					hoverText="white"
+					className=" ml-[1em] mt-[1em] text-[16px] w-[207px]"
+					onClick={""}
+				/>
 			</div>
 		</>
 	);

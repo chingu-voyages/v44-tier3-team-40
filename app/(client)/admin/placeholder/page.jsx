@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Modal from "../../../components/Modal";
+import Button from '../../../components/Button'
 
 // This component will be replaced with the finished component made by QA. However, the state and logic for the button/Modal will need to be carried over.
 const PlaceholderPage = () => {
@@ -17,12 +18,15 @@ const PlaceholderPage = () => {
 
 	return (
 		<>
-			<button
+			<Button 
+				text="delete"					
+				bgColor="#554ad8"
+				textColor="white"
+				hoverColor="#A4A4FF"
+				hoverText="white"
+				className=" ml-[1em] mt-[1em] text-[16px] w-[160px]"
 				onClick={handleOpenModal}
-				className="h-[48px] w-[160px] ml-[1em] mt-[1em] bg-[#554ad8] text-white center"
-			>
-				Delete
-			</button>
+			/>
 
 			<Modal isOpen={modalOpen} onClose={handleCloseModal}>
 				<h3>Are you sure?</h3>

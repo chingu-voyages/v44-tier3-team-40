@@ -1,5 +1,6 @@
 import TextFormInput from "@/app/components/FormInputs";
 import Link from "next/link";
+import Button from '../../components/Button'
 
 const ModifyAppointment = () => {
   return (
@@ -17,12 +18,15 @@ const ModifyAppointment = () => {
 
       {/* Button to be replaced with component once finished */}
       <Link href="/admin/confirmation">
-        <button
-          type="submit"
-          className="h-[48px] w-[160px] ml-[1em] mt-[1em] mb-[1em] bg-[#554ad8] text-white  center"
-        >
-          Submit
-        </button>
+        <Button 
+					text="Submit"
+					bgColor="#554ad8"
+					textColor="white"
+					hoverColor="#A4A4FF"
+					hoverText="white"
+					className=" ml-[1em] mt-[1em] mb-[1em] text-[16px]"
+					onClick={""}
+				/>
       </Link>
 
       <div className="ml-[1em] text-[#554ad8]">

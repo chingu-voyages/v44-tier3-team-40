@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Button from "@/app/components/Button";
 
 import ProgressStepper from "@/app/components/ProgressStepper";
 
@@ -22,9 +23,15 @@ const ConfirmAppointment = () => {
 
 					{/* Change href to appropriate page when it is created */}
 					<Link href={"/"}>
-						<button className="border border-black text-[#554ad8] h-[20px] w-[41px] text-[13px] pb-[1.75em] hover:bg-[#554ad8] hover:text-white">
-							EDIT
-						</button>
+						<Button 
+							text="Edit"
+							bgColor="white"
+							textColor="#554ad8"
+							hoverColor="#554ad8"
+							hoverText="white"
+							className="border border-black h-[0] w-[41px] text-[13px] pb-[1.75em]"
+							onClick={""}
+						/>
 					</Link>
 				</div>
 
@@ -40,9 +47,15 @@ const ConfirmAppointment = () => {
 
 					{/* Change href to appropriate page when it is created */}
 					<Link href={"/"}>
-						<button className="border border-black text-[#554ad8] h-[20px] w-[41px] text-[13px] pb-[1.75em] hover:bg-[#554ad8] hover:text-white">
-							EDIT
-						</button>
+						<Button 
+							text="Edit"
+							bgColor="white"
+							textColor="#554ad8"
+							hoverColor="#554ad8"
+							hoverText="white"
+							className="border border-black h-[0] w-[41px] text-[13px] pb-[1.75em]"
+							onClick={""}
+						/>
 					</Link>
 				</div>
 
@@ -58,9 +71,15 @@ const ConfirmAppointment = () => {
 
 					{/* Change href to appropriate page when it is created */}
 					<Link href={"/"}>
-						<button className="border border-black text-[#554ad8] h-[20px] w-[41px] text-[13px] pb-[1.75em] hover:bg-[#554ad8] hover:text-white">
-							EDIT
-						</button>
+						<Button 
+							text="Edit"
+							bgColor="white"
+							textColor="#554ad8"
+							hoverColor="#554ad8"
+							hoverText="white"
+							className="border border-black h-[0] w-[41px] text-[13px] pb-[1.75em]"
+							onClick={""}
+						/>
 					</Link>
 				</div>
 
@@ -76,9 +95,18 @@ const ConfirmAppointment = () => {
 
 					{/* Change href to appropriate page when it is created */}
 					<Link href={"/"}>
-						<button className="border border-black text-[#554ad8] h-[20px] w-[41px] text-[13px] pb-[1.75em] hover:bg-[#554ad8] hover:text-white">
+						{/* <button className="border border-black text-[#554ad8] h-[20px] w-[41px] text-[13px] pb-[1.75em] hover:bg-[#554ad8] hover:text-white">
 							EDIT
-						</button>
+						</button> */}
+						<Button 
+							text="Edit"
+							bgColor="white"
+							textColor="#554ad8"
+							hoverColor="#554ad8"
+							hoverText="white"
+							className="border border-black h-[0] w-[41px] text-[13px] pb-[1.75em]"
+							onClick={""}
+						/>
 					</Link>
 				</div>
 
@@ -91,9 +119,15 @@ const ConfirmAppointment = () => {
 			</div>
 
 			<Link href={"/success"}>
-				<button className="h-[48px] w-[160px] ml-[1em] mt-[1em] bg-[#554ad8] text-white center hover:bg-[#a4a4ff] ">
-					CONFIRM
-				</button>
+				<Button 
+					text="Confirm"
+					bgColor="#554ad8"
+					textColor="white"
+					hoverColor="#A4A4FF"
+					hoverText="white"
+					className=" ml-[1em] mt-[1em] text-[16px]"
+					onClick={""}
+				/>
 			</Link>
 		</>
 	);
