@@ -11,15 +11,15 @@ onValue(doctorsInDB, function(snapshot) {
 
         // const testDoctorName = testDataArray
 
-        console.log("doctors array" + doctorsArray);
+        console.log("doctors array" + " " + doctorsArray);
     
         for (let i = 0; i < doctorsArray.length; i++) {
             doctorDataArray = doctorsArray[i][1];
 
-            // console.log("doctor index:" + i + " " );
+            // console.log("doctor index:" + " " + i + " ");
             // console.log(doctorsArray[i]);
 
-            // console.log("doctor name" + i + " " );
+            // console.log("doctor name" + " " + i + " ");
             // console.log(doctorsArray[i][1]);
         }
 
