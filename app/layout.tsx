@@ -1,7 +1,7 @@
-"use client";
+'use client'
 import "./globals.css";
 import LinkButton from "./components/LinkButton";
-import { usePathname } from "next/navigation";
+import FormDataProvider from '././components/contexts/FormDataContext'
 
 export const metadata = {
   title: "Create Next App",
@@ -13,14 +13,15 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const pathname = usePathname();
   return (
     <html lang="en">
       <body>
         <nav className="w-full h-[48px]">
-          <LinkButton text={pathname === "/" ? "LOGIN" : "BACK"} />
+          <LinkButton text="BACK" />
         </nav>
-        {children}
+        <FormDataProvider>
+          {children}
+        </FormDataProvider>
       </body>
     </html>
   );
