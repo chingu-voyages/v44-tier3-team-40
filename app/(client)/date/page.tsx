@@ -4,6 +4,8 @@ import ProgressStepper from "@/app/components/ProgressStepper";
 import { FC, useState } from "react";
 import "./Calendar.css";
 import DropDownMenu from "@/app/components/DropDownMenu";
+import { useFormDataContext } from "@/app/components/contexts/FormDataContext";
+import { useRouter } from "next/navigation";
 
 interface ChooseADatePageProps {}
 
@@ -12,6 +14,8 @@ type ValuePiece = Date | null;
 type CalendarValue = ValuePiece | [ValuePiece, ValuePiece];
 
 const ChooseADatePage: FC<ChooseADatePageProps> = () => {
+  const router = useRouter();
+  const {formData , setFormData} = useFormDataContext()
   const todaysDate: Date = new Date();
   const [selectedDate, setSelectedDate] = useState<CalendarValue>(todaysDate);
   const [timeSlots, setTimeSlots] = useState<Array<string>>(
@@ -53,6 +57,11 @@ const ChooseADatePage: FC<ChooseADatePageProps> = () => {
         const hour = parseInt(timeString[0]);
         finalDate.setHours(hour, 0, 0);
         setExampleFinalDate(finalDate); // TODO  send this to the database
+        setFormData((prevFormData) => ({
+          ...prevFormData,
+          date: finalDate,
+        }));
+        router.push('/contact');
       }
     }
   }
