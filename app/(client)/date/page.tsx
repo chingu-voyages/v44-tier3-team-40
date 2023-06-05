@@ -2,7 +2,8 @@
 import Calendar from "react-calendar";
 import ProgressStepper from "@/app/components/ProgressStepper";
 import { FC, useState } from "react";
-import "./Calendar.css";
+import "../../Calendar.css";
+
 import DropDownMenu from "@/app/components/DropDownMenu";
 
 interface ChooseADatePageProps {}
