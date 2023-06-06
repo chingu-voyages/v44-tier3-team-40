@@ -1,4 +1,3 @@
-'use client'
 import "./globals.css";
 import LinkButton from "./components/LinkButton";
 import FormDataProvider from '././components/contexts/FormDataContext'
