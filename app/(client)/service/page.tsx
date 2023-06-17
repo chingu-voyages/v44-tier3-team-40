@@ -1,8 +1,22 @@
+'use client'
 import Link from "next/link";
-import { RadioFormInput } from "../../components/FormInputs";
+import { RadioFormInput } from "@/app/components/FormInputs";
 import ProgressStepper from "@/app/components/ProgressStepper";
+import { useFormDataContext } from "@/app/components/contexts/FormDataContext";
+import { useRouter } from "next/navigation";
+
 
 const ChooseAppointment = () => {
+  const {formData , setFormData} = useFormDataContext()
+  const router = useRouter();
+
+  const handleChange = (value) => {
+        setFormData((prevFormData) => ({
+          ...prevFormData,
+          service: value
+        }))
+  }
+
   return (
     <>
       <h2 className="ml-[0.5em] mt-[1em]">Western Rehab PT</h2>
@@ -10,21 +24,18 @@ const ChooseAppointment = () => {
         <ProgressStepper currentStep={1} length={5} label="Select a service" />
       </div>
 
-      <div className="pt-[3em]">
-        <Link href={"/date"}>
-          <RadioFormInput label="Initial PT Evaluation 60min - $125" />
-        </Link>
+      {/* setFormData((prevFormData) => ({
+          ...prevFormData,
+          date: finalDate,
+        })); */}
 
-        <Link href={"/date"}>
-          <RadioFormInput label="Personal Training - $125" />
-        </Link>
-        <Link href={"/date"}>
-          <RadioFormInput label="PT Follow Up Session - $125" />
-        </Link>
-        <Link href={"/date"}>
-          <RadioFormInput label="Back Realignment - $125" />
-        </Link>
-      </div>
+      <form className="pt-[3em]">
+          <RadioFormInput group='service' label="Initial PT Evaluation 60min - $125" onChange={(e) => handleChange(e.target.value)}/>
+          <RadioFormInput group='service' label="Personal Training - $125" onChange={(e) => handleChange(e.target.value)} />
+          <RadioFormInput group='service' label="PT Follow Up Session - $125" onChange={(e) => handleChange(e.target.value)}/>
+          <RadioFormInput group='service' label="Back Realignment - $125" onChange={(e) => handleChange(e.target.value)}/>
+      </form>
+      <button onClick={() => router.push('/date')}>Confirm</button>
     </>
   );
 };
